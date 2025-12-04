@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
-    "dev": "nodemon --watch 'src/**/*.ts' --exec ts-node src/server.ts",
+    "dev": "nodemon --watch 'src/**/*.ts' --watch 'src' --exec \"ts-node\" src/workspace/server.ts",
     "lint": "eslint 'src/**/*.ts'"
   },
   "keywords": [],
@@ -24,9 +24,10 @@
     "npm": "^11.6.4",
     "prettier": "^3.7.3",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "express-favicon": "^2.0.4",
+    "vue": "^3.5.25"
   },
   "dependencies": {
-    "vue": "^3.5.25"
   }
 }

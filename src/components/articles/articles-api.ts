@@ -1,15 +1,15 @@
 import { Router } from 'express';
 import {
-    createItem,
-    getItems,
-    getItemById,
-    updateItem,
-    deleteItem,
-} from '../controllers/itemController';
+  getItems,
+  createItem,
+  getItemById,
+  updateItem,
+  deleteItem
+} from './articles-controller';
 
 const router = Router();
 
-// router.get('/', getItems);
+router.get('/', getItems);
 router.get('/:id', getItemById);
 router.post('/', createItem);
 router.put('/:id', updateItem);
