@@ -49,6 +49,11 @@ export const getIndexPage = (req: Request, res: Response, next: NextFunction) =>
 // Create an item
 export const createItem = (req: Request, res: Response, next: NextFunction) => {
   try {
+
+    // console.log(req.body);
+    // console.log(req.params);
+    // console.log(req.query);
+
     const { name } = req.body;
 
     const newItem = article.create({ id: Date.now(), name })
@@ -63,6 +68,9 @@ export const createItem = (req: Request, res: Response, next: NextFunction) => {
 // Read all items
 export const getItems = (req: Request, res: Response, next: NextFunction) => {
   try {
+    console.log(req.body);
+    console.log(req.params);
+    console.log(req.query);
     res.json(article.read());
   } catch (error) {
     next(error);
@@ -72,12 +80,20 @@ export const getItems = (req: Request, res: Response, next: NextFunction) => {
 // Read single item
 export const getItemById = (req: Request, res: Response, next: NextFunction) => {
   try {
+    console.log(req.body);
+    console.log(req.params);
+    console.log(req.query);
+    const {qwe} = req.query;
+    console.log(qwe);
+
+
     const id = parseInt(req.params.id, 10);
     const item = article.read().find((i) => i.id === id);
     if (!item) {
       res.status(404).json({ message: 'Item not found' });
       return;
     }
+    console.log(item);
     res.json(item);
     // res.json(article.read());
   } catch (error) {

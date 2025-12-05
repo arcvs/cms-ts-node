@@ -20,9 +20,11 @@ export class Article {
     return this.data;
   }
 
-
   readId (id: number) {
     return this.data;
   }
 
+  delete (id: number) {
+    return this.data;
+  }
 }
