@@ -1,6 +1,6 @@
 {
   "type": "commonjs",
-  "name": "testnodefilessystem",
+  "name": "cms-ts-node",
   "version": "1.0.0",
   "description": "",
   "main": "tstIndexFiles.js",
@@ -8,6 +8,7 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "dev": "nodemon --watch 'src/**/*.ts' --watch 'src' --exec \"ts-node\" src/workspace/server.ts",
+    "dev-nw": "nodemon --exec \"ts-node\" src/workspace/server.ts",
     "lint": "eslint 'src/**/*.ts'"
   },
   "keywords": [],
